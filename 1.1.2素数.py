@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Mar 17 17:04:27 2016
-
-@author: ZFR-64SSD
-"""
 from math import sqrt
 def sushu1(x):
     if x==1:

@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Mar 21 16:13:59 2016
-
-@author: ZFR-64SSD
-"""
 def fun(n):
     if n>=90 and n<=100:
         return "A"

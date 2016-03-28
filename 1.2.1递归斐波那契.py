@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Mar 21 15:23:47 2016
-
-@author: ZFR-64SSD
-"""
 def fib1(n):
     if(n-1==0 or n-1==1):
         return n-1

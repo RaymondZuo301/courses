@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Mar 22 09:29:56 2016
-
-@author: ZFR-64SSD
-"""
 from math import sqrt
 def isprime(x):
      if x == 1: 
