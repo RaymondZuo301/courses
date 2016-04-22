@@ -6,14 +6,19 @@ import wx
 class Frame1(wx.Frame):
     def __init__(self,superior):
         wx.Frame.__init__(self,parent = superior,title = "Example",pos = (100,200),size = (200,100))
-        self.panel = wx.Panel(self)
-        self.panel.Bind(wx.EVT_LEFT_UP,self.OnClick)
-    
-    def OnClick(self,event):
-        posm = event.GetPosition()
-        wx.StaticText(parent = self.panel,label = "Hello,Worlf!",pos = (posm.x,posm.y))
+        panel = wx.Panel(self)
+        sizer = wx.BoxSizer(wx.VERTICAL)
+        self.text1 = wx.TextCtrl(panel,value = "Hello,world!",size = (200,180),style = wx.TE_MULTILINE)
+        sizer.Add(self.text1,0,wx.ALIGN_TOP | wx.EXPAND)
+        button = wx.Button(panel,label = "Click Me")
+        sizer.Add(button)
+        panel.SetSizerAndFit(sizer)
+        panel.Layout()
+        self.Bind(wx.EVT_BUTTON,self.OnClick,button)
+    def OnClick(self,text):
+        self.text1.AppendText("\nHello,World!")
 if __name__ == '__main__':
     app = wx.App()
-    frame = Frame0(None)
+    frame = Frame1(None)
     frame.Show(True)
     app.MainLoop()
